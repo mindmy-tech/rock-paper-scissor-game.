@@ -86,3 +86,36 @@ canvas = Canvas(
     highlightthickness=0,
     relief="ridge")
 
+# importing files
+background_img = PhotoImage(file=r"resourses\background.png")
+back_img = PhotoImage(file=r"resourses\Frame 3.png")
+taskbar_img = PhotoImage(file=r'resourses\Frame 4.png')
+img0 = PhotoImage(file=r"resourses\img0.png")
+img1 = PhotoImage(file=r"resourses\img1.png")
+img2 = PhotoImage(file=r"resourses\img2.png")
+img3 = PhotoImage(file=r"resourses\img5.png")
+pap_img = PhotoImage(file=r'resourses\Paper.png')
+rock_img = PhotoImage(file=r'resourses\Rock.png')
+scissor_img = PhotoImage(file=r'resourses\Scissors.png')
+chose_img = PhotoImage(file=r'resourses\Choose.png')
+
+# Labels ,Images ,Buttons assigning buttons
+
+# Images
+background = canvas.create_image(
+    325.0, 225.0,
+    image=background_img)
+
+back_lbl = Label(canvas,
+                 image=back_img,
+                 bg='#EEA2D5')
+
+label_pc = Label(canvas,
+                 text=' ',
+                 bg='#C4C4C4',
+                 image=chose_img)
+
+label_player = Label(canvas,
+                     text=' ',
+                     bg='#C4C4C4',
+                     image=chose_img)
