@@ -119,3 +119,92 @@ label_player = Label(canvas,
                      text=' ',
                      bg='#C4C4C4',
                      image=chose_img)
+
+# Buttons
+b0 = Button(
+    image=img0,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: game('Scissor'),
+    relief="flat",
+    activebackground="#EEA2D5",
+    bg="#EEA2D5")
+
+b1 = Button(
+    image=img1,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: game('Paper'),
+    relief="flat",
+    activebackground="#EEA2D5",
+    bg="#EEA2D5")
+
+b2 = Button(
+    image=img2,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: game('Rock'),
+    relief="flat",
+    activebackground="#EEA2D5",
+    bg="#EEA2D5")
+
+b3 = Button(
+    image=img3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=destroy,
+    relief="flat",
+    activebackground="#F054BB",
+    bg="#F054BB")
+
+# Labels
+lbl_cmt = Label(canvas,
+                text="Select your option",
+                bg='#C4C4C4',
+                font=("Helvetica", "11"))
+# Placing Elements
+canvas.place(x=0,
+             y=0)
+
+b0.place(
+    x=453,
+    y=347,
+    width=124,
+    height=91)
+
+b1.place(
+    x=247,
+    y=347,
+    width=124,
+    height=91)
+
+b2.place(
+    x=41,
+    y=343,
+    width=124,
+    height=91)
+
+b3.place(
+    x=0, y=0,
+    width=36,
+    height=42)
+
+back_lbl.place(x=125,
+               y=80)
+
+lbl_cmt.place(x=255,
+              y=263,
+              height=20)
+
+label_pc.place(x=213, y=168)
+
+label_player.place(x=337, y=168)
+
+# Ending
+canvas.bind("<B1-Motion>", move_app)
+
+window.overrideredirect(True)
+
+window.resizable(False, False)
+
+window.mainloop()
