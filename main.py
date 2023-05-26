@@ -67,3 +67,6 @@ def game(usr_inp):
             label_pc.configure(image=rock_img)
             lbl_cmt.configure(text=lose)
     print(n)
+    
+def move_app(e):
+    window.geometry(f'+{e.x_root}+{e.y_root}')    
