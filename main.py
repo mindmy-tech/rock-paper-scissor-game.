@@ -69,4 +69,20 @@ def game(usr_inp):
     print(n)
     
 def move_app(e):
-    window.geometry(f'+{e.x_root}+{e.y_root}')    
+    window.geometry(f'+{e.x_root}+{e.y_root}')
+
+# Window Starting
+window = Tk()
+window.geometry("650x450")
+window.configure(bg="#ffffff")
+
+# canvas | Frame
+canvas = Canvas(
+    window,
+    bg="#ffffff",
+    height=450,
+    width=650,
+    bd=0,
+    highlightthickness=0,
+    relief="ridge")
+
